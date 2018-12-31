@@ -1,9 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
+using System.Security.Principal;
 using System.Threading.Tasks;
+using H_Plus_Sports.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace HPlusSportsAPI.Controllers
 {
@@ -11,39 +15,56 @@ namespace HPlusSportsAPI.Controllers
     [Route("api/Products")]
     public class ProductsController : Controller
     {
-        public ProductsController()
+        private readonly H_Plus_SportsContext _context;
+        public ProductsController(H_Plus_SportsContext context)
         {
-
+            _context = context;
         }
 
         [HttpGet]
         public IActionResult GetProduct()
         {
-            return Ok();
+            return new ObjectResult(_context.Product);
         }
 
-        [HttpGet("{id}")]
-        public IActionResult GetProduct([FromRoute] int id)
+        [HttpGet("{id}",Name = "GetProduct")]
+        public async Task<IActionResult> GetProduct([FromRoute] string id)
         {
-            return Ok();
+            var product = await _context.Product.SingleOrDefaultAsync(m => m.ProductId==id);
+            
+            return Ok(product);
         }
 
         [HttpPost]
-        public IActionResult PostProduct([FromBody] Object obj)
+        public async Task<IActionResult> PostProduct([FromBody] Product product)
         {
-            return Ok();
+            _context.Product.Add(product);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction("getProduct", new {id = product.ProductId},value: product);
+
         }
 
         [HttpPut("{id}")]
-        public IActionResult PutProduct([FromRoute] int id, [FromBody] Object obj)
+        public async Task<IActionResult> PutProduct([FromRoute] int id, [FromBody] Product product)
         {
-            return Ok();
+            _context.Entry(product).State = EntityState.Modified;
+
+            await _context.SaveChangesAsync();
+           
+            return Ok(product);
         }
 
         [HttpDelete("{id}")]
-        public IActionResult DeleteProduct([FromRoute] int id)
+        public async Task<IActionResult> DeleteProduct([FromRoute] string id)
         {
-            return Ok();
+            var product = await _context.Product.SingleOrDefaultAsync(m => m.ProductId == id);
+
+            _context.Product.Remove(product);
+            
+            await _context.SaveChangesAsync();
+            
+            return Ok(product);
         }
     }
 }
