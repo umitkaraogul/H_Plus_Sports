@@ -6,7 +6,11 @@
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="H_Plus_Sports" t="IncludeRecursive">
         <e p="Controllers" t="Include">
-          <e p="ValuesController.cs" t="Include" />
+          <e p="CustomersController.cs" t="Include" />
+          <e p="OrderItemsController.cs" t="Include" />
+          <e p="OrdersController.cs" t="Include" />
+          <e p="ProductsController.cs" t="Include" />
+          <e p="SalespersonsController.cs" t="Include" />
         </e>
         <e p="H_Plus_Sports.csproj" t="IncludeRecursive" />
         <e p="Models" t="Include">
