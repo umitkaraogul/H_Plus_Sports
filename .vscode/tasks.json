@@ -1,0 +1,15 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/H_Plus_Sports/H_Plus_Sports.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}

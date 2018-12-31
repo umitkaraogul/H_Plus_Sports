@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Security.Principal;
+﻿using System.Linq;
 using System.Threading.Tasks;
-using H_Plus_Sports.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using H_Plus_Sports.Models;
 
 namespace HPlusSportsAPI.Controllers
 {
@@ -16,54 +12,124 @@ namespace HPlusSportsAPI.Controllers
     public class ProductsController : Controller
     {
         private readonly H_Plus_SportsContext _context;
+
         public ProductsController(H_Plus_SportsContext context)
         {
             _context = context;
         }
 
+        private bool ProductExists(string id)
+        {
+            return _context.Product.Any(e => e.ProductId == id);
+        }
+
         [HttpGet]
+        [Produces(typeof(DbSet<Product>))]
         public IActionResult GetProduct()
         {
             return new ObjectResult(_context.Product);
         }
 
-        [HttpGet("{id}",Name = "GetProduct")]
+        [HttpGet("{id}")]
+        [Produces(typeof(Product))]
         public async Task<IActionResult> GetProduct([FromRoute] string id)
         {
-            var product = await _context.Product.SingleOrDefaultAsync(m => m.ProductId==id);
-            
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var product = await _context.Product.SingleOrDefaultAsync(m => m.ProductId == id);
+
+            if (product == null)
+            {
+                return NotFound();
+            }
+
             return Ok(product);
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> PostProduct([FromBody] Product product)
-        {
-            _context.Product.Add(product);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("getProduct", new {id = product.ProductId},value: product);
-
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutProduct([FromRoute] int id, [FromBody] Product product)
+        [Produces(typeof(Product))]
+        public async Task<IActionResult> PutProduct([FromRoute] string id, [FromBody] Product product)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            if (id != product.ProductId)
+            {
+                return BadRequest();
+            }
+
             _context.Entry(product).State = EntityState.Modified;
 
-            await _context.SaveChangesAsync();
-           
-            return Ok(product);
+            try
+            {
+                await _context.SaveChangesAsync();
+                return Ok(product);
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!ProductExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+        }
+
+        [HttpPost]
+        [Produces(typeof(Product))]
+        public async Task<IActionResult> PostProduct([FromBody] Product product)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            _context.Product.Add(product);
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateException)
+            {
+                if (ProductExists(product.ProductId))
+                {
+                    return new StatusCodeResult(StatusCodes.Status409Conflict);
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return CreatedAtAction("GetProduct", new { id = product.ProductId }, product);
         }
 
         [HttpDelete("{id}")]
+        [Produces(typeof(Product))]
         public async Task<IActionResult> DeleteProduct([FromRoute] string id)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             var product = await _context.Product.SingleOrDefaultAsync(m => m.ProductId == id);
+            if (product == null)
+            {
+                return NotFound();
+            }
 
             _context.Product.Remove(product);
-            
             await _context.SaveChangesAsync();
-            
+
             return Ok(product);
         }
     }
