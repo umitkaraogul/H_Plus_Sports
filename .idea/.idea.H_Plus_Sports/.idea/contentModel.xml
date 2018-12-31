@@ -9,6 +9,14 @@
           <e p="ValuesController.cs" t="Include" />
         </e>
         <e p="H_Plus_Sports.csproj" t="IncludeRecursive" />
+        <e p="Models" t="Include">
+          <e p="Customer.cs" t="Include" />
+          <e p="H_Plus_SportsContext.cs" t="Include" />
+          <e p="Order.cs" t="Include" />
+          <e p="OrderItem.cs" t="Include" />
+          <e p="Product.cs" t="Include" />
+          <e p="Salesperson.cs" t="Include" />
+        </e>
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">
           <e p="launchSettings.json" t="Include" />

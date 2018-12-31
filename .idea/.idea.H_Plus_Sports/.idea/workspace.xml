@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="648678f6-f94b-4919-be08-fd47b0cc56f4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.H_Plus_Sports/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.H_Plus_Sports/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.H_Plus_Sports/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.H_Plus_Sports/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,6 +22,7 @@
     <setting file="file://$PROJECT_DIR$/H_Plus_Sports/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/H_Plus_Sports/Controllers/ValuesController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B4EF600F-4A59-4FE2-865A-8F97F915FB9D/a9/1cc89876/ActionResult`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/H_Plus_Sports/Models/H_Plus_SportsContext.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="716" />
@@ -45,6 +47,12 @@
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
               <item name="H_Plus_Sports" type="24d0babc:SolutionExplorerModelNode" />
               <item name="H_Plus_Sports" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="H_Plus_Sports" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="H_Plus_Sports" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Controllers" type="24d0babc:SolutionExplorerModelNode" />
             </path>
           </expand>
           <select />
@@ -121,12 +129,12 @@
       <option name="presentableId" value="Default" />
       <updated>1546208823511</updated>
       <workItem from="1546208831130" duration="498000" />
-      <workItem from="1546211607499" duration="3060000" />
+      <workItem from="1546211607499" duration="6645000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3667000" />
+    <option name="totallyTimeSpent" value="7252000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -140,7 +148,7 @@
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25379092" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.43176377" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -153,7 +161,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="NuGet" order="7" />
+      <window_info anchor="bottom" id="NuGet" order="7" weight="0.83224756" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32736155" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
@@ -232,42 +240,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/H_Plus_Sports/appsettings.Development.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/H_Plus_Sports/appsettings.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/H_Plus_Sports/Program.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-          <folding>
-            <marker date="1546208855488" expanded="false" signature="6:255" ph="..." />
-            <marker date="1546208855488" expanded="true" signature="280:607" ph="{...}" />
-            <marker date="1546208855488" expanded="true" signature="307:605" ph="{...}" />
-            <marker date="1546208855488" expanded="true" signature="360:434" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/H_Plus_Sports/Startup.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-222">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-          <folding>
-            <marker date="1546208855832" expanded="false" signature="6:402" ph="..." />
-            <marker date="1546208855832" expanded="true" signature="427:1524" ph="{...}" />
-            <marker date="1546208855832" expanded="true" signature="454:1522" ph="{...}" />
-            <marker date="1546208855832" expanded="true" signature="513:576" ph="{...}" />
-            <marker date="1546208855832" expanded="true" signature="799:908" ph="{...}" />
-            <marker date="1546208855832" expanded="true" signature="1096:1516" ph="{...}" />
-            <marker date="1546208855832" expanded="true" signature="1143:1220" ph="{...}" />
-            <marker date="1546208855832" expanded="true" signature="1237:1440" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/H_Plus_Sports/Controllers/ValuesController.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-125">
@@ -284,6 +256,66 @@
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/H_Plus_Sports/Properties/launchSettings.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/H_Plus_Sports/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding>
+            <marker date="1546208855488" expanded="true" signature="280:607" ph="{...}" />
+            <marker date="1546208855488" expanded="true" signature="307:605" ph="{...}" />
+            <marker date="1546208855488" expanded="true" signature="360:434" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/H_Plus_Sports/Models/H_Plus_SportsContext.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2247">
+          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+          <folding>
+            <marker date="1546217713038" expanded="false" signature="6:96" ph="..." />
+            <marker date="1546217713038" expanded="true" signature="128:6700" ph="{...}" />
+            <marker date="1546217713038" expanded="true" signature="188:6698" ph="{...}" />
+            <marker date="1546217713038" expanded="true" signature="232:252" ph="{...}" />
+            <marker date="1546217713038" expanded="true" signature="365:385" ph="{...}" />
+            <marker date="1546217713038" expanded="true" signature="783:1377" ph="{...}" />
+            <marker date="1546217713038" expanded="true" signature="839:1367" ph="{...}" />
+            <marker date="1546217713038" expanded="true" signature="1453:6692" ph="{...}" />
+            <marker date="1546217713038" expanded="true" signature="1593:2703" ph="{...}" />
+            <marker date="1546217713038" expanded="true" signature="2755:3840" ph="{...}" />
+            <marker date="1546217713038" expanded="true" signature="3896:4792" ph="{...}" />
+            <marker date="1546217713038" expanded="true" signature="4846:5506" ph="{...}" />
+            <marker date="1546217713038" expanded="true" signature="5564:6680" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/H_Plus_Sports/appsettings.Development.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/H_Plus_Sports/Startup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+          <folding>
+            <marker date="1546208855832" expanded="false" signature="6:402" ph="..." />
+            <marker date="1546208855832" expanded="true" signature="427:1524" ph="{...}" />
+            <marker date="1546208855832" expanded="true" signature="454:1522" ph="{...}" />
+            <marker date="1546208855832" expanded="true" signature="513:576" ph="{...}" />
+            <marker date="1546208855832" expanded="true" signature="799:908" ph="{...}" />
+            <marker date="1546208855832" expanded="true" signature="1096:1516" ph="{...}" />
+            <marker date="1546208855832" expanded="true" signature="1143:1220" ph="{...}" />
+            <marker date="1546208855832" expanded="true" signature="1237:1440" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/H_Plus_Sports/appsettings.json">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
