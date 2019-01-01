@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using H_Plus_Sports.Models;
 using System.Net;
+using H_Plus_Sports.Contracts;
 
 namespace HPlusSportsAPI.Controllers
 {
@@ -11,28 +12,28 @@ namespace HPlusSportsAPI.Controllers
     [Route("api/Customers")]
     public class CustomersController : Controller
     {
-        private readonly H_Plus_SportsContext _context;
+        private readonly ICustomerRepository _customerRepository;
 
-        public CustomersController(H_Plus_SportsContext context)
+        public CustomersController(ICustomerRepository customerRepository)
         {
-            _context = context;
+            _customerRepository = customerRepository;
         }
 
-        private bool CustomerExists(int id)
+        private async Task<bool> CustomerExists(int id)
         {
-            return _context.Customer.Any(e => e.CustomerId == id);
+            return await _customerRepository.Exist(id);
         }
 
         [HttpGet]
         [Produces(typeof(DbSet<Customer>))]
         public IActionResult GetCustomer()
         {
-            var results = new ObjectResult(_context.Customer)
+            var results = new ObjectResult(_customerRepository.GetAll())
             {
                 StatusCode = (int)HttpStatusCode.OK
             };
 
-            Request.HttpContext.Response.Headers.Add("X-Total-Count", _context.Customer.Count().ToString());
+            Request.HttpContext.Response.Headers.Add("X-Total-Count", _customerRepository.GetAll().Count().ToString());
 
             return results;
         }
@@ -46,7 +47,7 @@ namespace HPlusSportsAPI.Controllers
                 return BadRequest(ModelState);
             }
 
-            var customer = await _context.Customer.SingleOrDefaultAsync(m => m.CustomerId == id);
+            var customer = await _customerRepository.Find(id);
 
             if (customer == null)
             {
@@ -70,10 +71,23 @@ namespace HPlusSportsAPI.Controllers
                 return BadRequest();
             }
 
-            _context.Entry(customer).State = EntityState.Modified;
-
-            await _context.SaveChangesAsync();
-            return Ok(customer);
+            try
+            {
+                await _customerRepository.Update(customer);
+                return Ok(customer);
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!await CustomerExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+            
         }
 
         [HttpPost]
@@ -85,8 +99,7 @@ namespace HPlusSportsAPI.Controllers
                 return BadRequest(ModelState);
             }
 
-            _context.Customer.Add(customer);
-            await _context.SaveChangesAsync();
+            await _customerRepository.Add(customer);
 
             return CreatedAtAction("GetCustomer", new { id = customer.CustomerId }, customer);
         }
@@ -100,16 +113,14 @@ namespace HPlusSportsAPI.Controllers
                 return BadRequest(ModelState);
             }
 
-            var customer = await _context.Customer.SingleOrDefaultAsync(m => m.CustomerId == id);
-            if (customer == null)
+            if (! await CustomerExists(id))
             {
                 return NotFound();
             }
 
-            _context.Customer.Remove(customer);
-            await _context.SaveChangesAsync();
+            await _customerRepository.Remove(id);
 
-            return Ok(customer);
+            return Ok();
         }
     }
 }

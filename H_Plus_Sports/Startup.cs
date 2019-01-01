@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using H_Plus_Sports.Contracts;
 using H_Plus_Sports.Models;
+using H_Plus_Sports.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -29,6 +31,12 @@ namespace H_Plus_Sports
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
+            services.AddScoped<ICustomerRepository, CustomerRepository>();
+            services.AddScoped<IOrderItemRepository, OrderItemRepository>();
+            services.AddScoped<IOrderRepository, OrderRepository>();
+            services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<ISalespersonRepository, SalespersonRepository>();
+
             var connection ="Server=tcp:hsportskaraogul.database.windows.net,1433;Initial Catalog=H_Plus_Sports;Persist Security Info=False;User ID=umit;Password=!Q2w3e4r;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
 
             services.AddDbContext<H_Plus_SportsContext>(options => options.UseSqlServer(connection));
@@ -47,6 +55,7 @@ namespace H_Plus_Sports
                 app.UseHsts();
             }
 
+            app.UseMiddleware<StackifyMiddleware.RequestTracerMiddleware>();
             app.UseHttpsRedirection();
             app.UseMvc();
         }

@@ -1,33 +1,32 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+﻿using System.Threading.Tasks;
+using H_Plus_Sports.Contracts;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using H_Plus_Sports.Models;
 
-namespace HPlusSportsAPI.Controllers
+namespace H_Plus_Sports.Controllers
 {
     [Produces("application/json")]
     [Route("api/Products")]
     public class ProductsController : Controller
     {
-        private readonly H_Plus_SportsContext _context;
+        private readonly IProductRepository _products;
 
-        public ProductsController(H_Plus_SportsContext context)
+        public ProductsController(IProductRepository products)
         {
-            _context = context;
+            _products = products;
         }
 
-        private bool ProductExists(string id)
+        private async Task<bool> ProductExists(string id)
         {
-            return _context.Product.Any(e => e.ProductId == id);
+            return await _products.Exists(id);
         }
 
         [HttpGet]
         [Produces(typeof(DbSet<Product>))]
         public IActionResult GetProduct()
         {
-            return new ObjectResult(_context.Product);
+            return new ObjectResult(_products.GetAll());
         }
 
         [HttpGet("{id}")]
@@ -39,7 +38,7 @@ namespace HPlusSportsAPI.Controllers
                 return BadRequest(ModelState);
             }
 
-            var product = await _context.Product.SingleOrDefaultAsync(m => m.ProductId == id);
+            var product = await _products.Find(id);
 
             if (product == null)
             {
@@ -63,22 +62,20 @@ namespace HPlusSportsAPI.Controllers
                 return BadRequest();
             }
 
-            _context.Entry(product).State = EntityState.Modified;
-
             try
             {
-                await _context.SaveChangesAsync();
+                await _products.Update(product);
                 return Ok(product);
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!ProductExists(id))
+                if (!await ProductExists(id))
                 {
                     return NotFound();
                 }
                 else
                 {
-                    throw;
+                    return BadRequest();
                 }
             }
         }
@@ -92,20 +89,19 @@ namespace HPlusSportsAPI.Controllers
                 return BadRequest(ModelState);
             }
 
-            _context.Product.Add(product);
             try
             {
-                await _context.SaveChangesAsync();
+                await _products.Add(product);
             }
             catch (DbUpdateException)
             {
-                if (ProductExists(product.ProductId))
+                if (!await ProductExists(product.ProductId))
                 {
-                    return new StatusCodeResult(StatusCodes.Status409Conflict);
+                    return NotFound();
                 }
                 else
                 {
-                    throw;
+                    return BadRequest();
                 }
             }
 
@@ -121,16 +117,14 @@ namespace HPlusSportsAPI.Controllers
                 return BadRequest(ModelState);
             }
 
-            var product = await _context.Product.SingleOrDefaultAsync(m => m.ProductId == id);
-            if (product == null)
+            if (!await ProductExists(id))
             {
                 return NotFound();
             }
 
-            _context.Product.Remove(product);
-            await _context.SaveChangesAsync();
+            await _products.Remove(id);
 
-            return Ok(product);
+            return Ok();
         }
     }
 }

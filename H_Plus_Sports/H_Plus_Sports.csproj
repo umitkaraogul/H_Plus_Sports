@@ -9,6 +9,7 @@
         <PackageReference Include="Microsoft.AspNetCore.App" />
         <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.0" />
+        <PackageReference Include="StackifyMiddleware" Version="3.0.2" />
     </ItemGroup>
 
 </Project>
