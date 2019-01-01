@@ -46,6 +46,10 @@
           "target": "Package",
           "version": "[2.2.0, )",
           "autoReferenced": true
+        },
+        "StackifyMiddleware": {
+          "target": "Package",
+          "version": "[3.0.2, )"
         }
       },
       "imports": [
