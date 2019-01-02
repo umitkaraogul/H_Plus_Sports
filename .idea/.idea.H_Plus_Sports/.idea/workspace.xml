@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="648678f6-f94b-4919-be08-fd47b0cc56f4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.H_Plus_Sports/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.H_Plus_Sports/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.H_Plus_Sports/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.H_Plus_Sports/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.H_Plus_Sports/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.H_Plus_Sports/riderModule.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/H_Plus_Sports.Tests/CustomerIntegrationTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/H_Plus_Sports.Tests/CustomerIntegrationTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/H_Plus_Sports.Tests/H_Plus_Sports.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/H_Plus_Sports.Tests/H_Plus_Sports.Tests.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/H_Plus_Sports.Tests/OrderIntegrationTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/H_Plus_Sports.Tests/OrderIntegrationTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/H_Plus_Sports.Tests/OrderItemIntegrationTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/H_Plus_Sports.Tests/OrderItemIntegrationTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/H_Plus_Sports.Tests/ProductIntegrationTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/H_Plus_Sports.Tests/ProductIntegrationTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/H_Plus_Sports.Tests/SalespersonIntegrationTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/H_Plus_Sports.Tests/SalespersonIntegrationTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/H_Plus_Sports/Controllers/CustomersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/H_Plus_Sports/Controllers/CustomersController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/H_Plus_Sports/obj/Debug/netcoreapp2.2/H_Plus_Sports.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/H_Plus_Sports/obj/Debug/netcoreapp2.2/H_Plus_Sports.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/H_Plus_Sports/obj/H_Plus_Sports.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/H_Plus_Sports/obj/H_Plus_Sports.csproj.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/H_Plus_Sports/obj/H_Plus_Sports.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/H_Plus_Sports/obj/H_Plus_Sports.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/H_Plus_Sports/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/H_Plus_Sports/obj/project.assets.json" afterDir="false" />
-    </list>
+    <list default="true" id="648678f6-f94b-4919-be08-fd47b0cc56f4" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +27,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/H_Plus_Sports.Tests/CustomerIntegrationTests.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5">
+            <state relative-caret-position="205">
               <caret line="87" lean-forward="true" selection-start-line="87" selection-end-line="87" />
               <folding>
                 <marker date="1521135922000" expanded="false" signature="6:126" ph="..." />
@@ -201,12 +186,12 @@
       <workItem from="1546380161498" duration="1266000" />
       <workItem from="1546382169011" duration="1332000" />
       <workItem from="1546450855051" duration="1937000" />
-      <workItem from="1546461508665" duration="1861000" />
+      <workItem from="1546461508665" duration="2725000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25239000" />
+    <option name="totallyTimeSpent" value="26103000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -220,7 +205,7 @@
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.32482043" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32482043" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -238,9 +223,9 @@
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="Unit Tests" order="11" weight="0.32084692" />
       <window_info anchor="bottom" id="REST Client" order="12" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="13" visible="true" weight="0.59934855" />
+      <window_info anchor="bottom" id="Terminal" order="13" weight="0.59934855" />
       <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" />
-      <window_info anchor="bottom" id="Build" order="15" weight="0.257329" />
+      <window_info anchor="bottom" id="Build" order="15" visible="true" weight="0.257329" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -626,7 +611,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/H_Plus_Sports.Tests/CustomerIntegrationTests.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5">
+        <state relative-caret-position="205">
           <caret line="87" lean-forward="true" selection-start-line="87" selection-end-line="87" />
           <folding>
             <marker date="1521135922000" expanded="false" signature="6:126" ph="..." />
