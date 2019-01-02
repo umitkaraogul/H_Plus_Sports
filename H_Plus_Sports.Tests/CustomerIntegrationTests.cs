@@ -2,11 +2,10 @@
 using System.Net.Http;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.TestHost;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 
 namespace H_Plus_Sports.Tests
 {
-    [TestClass]
     public class CustomerIntegrationTests
     {
         private readonly HttpClient _client;
@@ -17,7 +16,7 @@ namespace H_Plus_Sports.Tests
             _client = server.CreateClient();
         }
 
-        [TestMethod]
+        [Fact]
         public void CustomerGetAllTest()
         {
             // Arrange
@@ -27,11 +26,11 @@ namespace H_Plus_Sports.Tests
             var response = _client.SendAsync(request).Result;
 
             // Assert
-            Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
+            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
         }
-        
-        [TestMethod]
-        [DataRow(100)]
+
+        [Theory]
+        [InlineData(100)]
         public void CustomerGetOneTest(int id)
         {
             // Arrange
@@ -41,10 +40,10 @@ namespace H_Plus_Sports.Tests
             var response = _client.SendAsync(request).Result;
 
             // Assert
-            Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
+            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
         }
 
-        [TestMethod]
+        [Fact]
         public void CustomerPostTest()
         {
             // Arrange
@@ -54,11 +53,11 @@ namespace H_Plus_Sports.Tests
             var response = _client.SendAsync(request).Result;
 
             // Assert
-            Assert.AreEqual(HttpStatusCode.UnsupportedMediaType, response.StatusCode);
+            Assert.Equal(HttpStatusCode.UnsupportedMediaType, response.StatusCode);
         }
 
-        [TestMethod]
-        [DataRow(1)]
+        [Theory]
+        [InlineData(1)]
         public void CustomerPutTest(int id)
         {
             // Arrange
@@ -68,11 +67,11 @@ namespace H_Plus_Sports.Tests
             var response = _client.SendAsync(request).Result;
 
             // Assert
-            Assert.AreEqual(HttpStatusCode.UnsupportedMediaType, response.StatusCode);
+            Assert.Equal(HttpStatusCode.UnsupportedMediaType, response.StatusCode);
         }
 
-        [TestMethod]
-        [DataRow(1)]
+        [Theory]
+        [InlineData(1)]
         public void CustomerDeleteTest(int id)
         {
             // Arrange
@@ -82,7 +81,8 @@ namespace H_Plus_Sports.Tests
             var response = _client.SendAsync(request).Result;
 
             // Assert
-            Assert.AreEqual(HttpStatusCode.NotFound, response.StatusCode);
+            Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
         }
     }
 }
+

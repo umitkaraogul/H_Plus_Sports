@@ -2,11 +2,10 @@
 using System.Net.Http;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.TestHost;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 
 namespace H_Plus_Sports.Tests
 {
-    [TestClass]
     public class ProductIntegrationTests
     {
         private readonly HttpClient _client;
@@ -17,7 +16,7 @@ namespace H_Plus_Sports.Tests
             _client = server.CreateClient();
         }
 
-        [TestMethod]
+        [Fact]
         public void ProductGetAllTest()
         {
             // Arrange
@@ -27,11 +26,11 @@ namespace H_Plus_Sports.Tests
             var response = _client.SendAsync(request).Result;
 
             // Assert
-            Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
+            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
         }
 
-        [TestMethod]
-        [DataRow("MWBLU32")]
+        [Theory]
+        [InlineData("MWBLU32")]
         public void ProductGetOneTest(string id)
         {
             // Arrange
@@ -41,10 +40,10 @@ namespace H_Plus_Sports.Tests
             var response = _client.SendAsync(request).Result;
 
             // Assert
-            Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
+            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
         }
 
-        [TestMethod]
+        [Fact]
         public void ProductPostTest()
         {
             // Arrange
@@ -54,11 +53,11 @@ namespace H_Plus_Sports.Tests
             var response = _client.SendAsync(request).Result;
 
             // Assert
-            Assert.AreEqual(HttpStatusCode.UnsupportedMediaType, response.StatusCode);
+            Assert.Equal(HttpStatusCode.UnsupportedMediaType, response.StatusCode);
         }
 
-        [TestMethod]
-        [DataRow("MWORA32")]
+        [Theory]
+        [InlineData("MWORA32")]
         public void ProductPutTest(string id)
         {
             // Arrange
@@ -68,11 +67,11 @@ namespace H_Plus_Sports.Tests
             var response = _client.SendAsync(request).Result;
 
             // Assert
-            Assert.AreEqual(HttpStatusCode.UnsupportedMediaType, response.StatusCode);
+            Assert.Equal(HttpStatusCode.UnsupportedMediaType, response.StatusCode);
         }
 
-        [TestMethod]
-        [DataRow("MWORA32")]
+        [Theory]
+        [InlineData("MWORA32")]
         public void ProductDeleteTest(string id)
         {
             // Arrange
@@ -82,7 +81,7 @@ namespace H_Plus_Sports.Tests
             var response = _client.SendAsync(request).Result;
 
             // Assert
-            Assert.AreEqual(HttpStatusCode.NotFound, response.StatusCode);
+            Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
         }
     }
 }
