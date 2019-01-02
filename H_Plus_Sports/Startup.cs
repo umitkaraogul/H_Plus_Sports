@@ -1,19 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using H_Plus_Sports.Contracts;
+﻿using H_Plus_Sports.Contracts;
 using H_Plus_Sports.Models;
 using H_Plus_Sports.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 
 namespace H_Plus_Sports
 {
@@ -29,7 +22,9 @@ namespace H_Plus_Sports
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddMvc()
+            .SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
+            .AddJsonOptions((x => x.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore));
 
             services.AddScoped<ICustomerRepository, CustomerRepository>();
             services.AddScoped<IOrderItemRepository, OrderItemRepository>();
@@ -55,7 +50,7 @@ namespace H_Plus_Sports
                 app.UseHsts();
             }
 
-            app.UseMiddleware<StackifyMiddleware.RequestTracerMiddleware>();
+            //app.UseMiddleware<StackifyMiddleware.RequestTracerMiddleware>();
             app.UseHttpsRedirection();
             app.UseMvc();
         }

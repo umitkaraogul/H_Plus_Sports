@@ -12,13 +12,13 @@ namespace H_Plus_Sports.Models
         }
 
         public int CustomerId { get; set; }
-        
         [StringLength(50)]
         public string FirstName { get; set; }
         [StringLength(50)]
         public string LastName { get; set; }
         [EmailAddress]
         public string Email { get; set; }
+        [Phone]
         public string Phone { get; set; }
         public string Address { get; set; }
         public string City { get; set; }

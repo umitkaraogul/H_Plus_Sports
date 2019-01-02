@@ -57,6 +57,10 @@
       <e p="H_Plus_Sports.Tests" t="IncludeRecursive">
         <e p="CustomerIntegrationTests.cs" t="Include" />
         <e p="H_Plus_Sports.Tests.csproj" t="IncludeRecursive" />
+        <e p="OrderIntegrationTests.cs" t="Include" />
+        <e p="OrderItemIntegrationTests.cs" t="Include" />
+        <e p="ProductIntegrationTests.cs" t="Include" />
+        <e p="SalespersonIntegrationTests.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">

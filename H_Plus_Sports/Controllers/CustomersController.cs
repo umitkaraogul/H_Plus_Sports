@@ -53,6 +53,8 @@ namespace HPlusSportsAPI.Controllers
             {
                 return NotFound();
             }
+            var srz=Json(customer);
+            return srz;
 
             return Ok(customer);
         }

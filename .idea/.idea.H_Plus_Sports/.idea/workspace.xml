@@ -4,12 +4,15 @@
     <list default="true" id="648678f6-f94b-4919-be08-fd47b0cc56f4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.H_Plus_Sports/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.H_Plus_Sports/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.H_Plus_Sports/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.H_Plus_Sports/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.H_Plus_Sports/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.H_Plus_Sports/riderModule.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/H_Plus_Sports.sln" beforeDir="false" afterPath="$PROJECT_DIR$/H_Plus_Sports.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/H_Plus_Sports/obj/H_Plus_Sports.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/H_Plus_Sports/obj/H_Plus_Sports.csproj.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/H_Plus_Sports/obj/H_Plus_Sports.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/H_Plus_Sports/obj/H_Plus_Sports.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/H_Plus_Sports/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/H_Plus_Sports/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/H_Plus_Sports/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/H_Plus_Sports/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/H_Plus_Sports.Tests/H_Plus_Sports.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/H_Plus_Sports.Tests/H_Plus_Sports.Tests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/H_Plus_Sports/Controllers/CustomersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/H_Plus_Sports/Controllers/CustomersController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/H_Plus_Sports/Models/Customer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/H_Plus_Sports/Models/Customer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/H_Plus_Sports/Models/Order.cs" beforeDir="false" afterPath="$PROJECT_DIR$/H_Plus_Sports/Models/Order.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/H_Plus_Sports/Models/OrderItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/H_Plus_Sports/Models/OrderItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/H_Plus_Sports/Models/Product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/H_Plus_Sports/Models/Product.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/H_Plus_Sports/Models/Salesperson.cs" beforeDir="false" afterPath="$PROJECT_DIR$/H_Plus_Sports/Models/Salesperson.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/H_Plus_Sports/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/H_Plus_Sports/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/H_Plus_Sports/obj/Debug/netcoreapp2.2/H_Plus_Sports.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/H_Plus_Sports/obj/Debug/netcoreapp2.2/H_Plus_Sports.csprojAssemblyReference.cache" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,15 +35,122 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/H_Plus_Sports/Controllers/CustomersController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="173">
+              <caret line="56" column="23" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="23" />
+              <folding>
+                <marker date="1546452370711" expanded="false" signature="6:194" ph="..." />
+                <marker date="1546452370711" expanded="true" signature="232:3395" ph="{...}" />
+                <marker date="1546452370711" expanded="true" signature="348:3393" ph="{...}" />
+                <marker date="1546452370711" expanded="true" signature="496:570" ph="{...}" />
+                <marker date="1546452370711" expanded="true" signature="627:703" ph="{...}" />
+                <marker date="1546452370711" expanded="true" signature="809:1133" ph="{...}" />
+                <marker date="1546452370711" expanded="true" signature="905:972" ph="{...}" />
+                <marker date="1546452370711" expanded="true" signature="1270:1658" ph="{...}" />
+                <marker date="1546452370711" expanded="true" signature="1317:1392" ph="{...}" />
+                <marker date="1546452370711" expanded="true" signature="1491:1554" ph="{...}" />
+                <marker date="1546452370711" expanded="true" signature="1825:2504" ph="{...}" />
+                <marker date="1546452370711" expanded="true" signature="1872:1947" ph="{...}" />
+                <marker date="1546452370711" expanded="true" signature="1991:2056" ph="{...}" />
+                <marker date="1546452370711" expanded="true" signature="2073:2198" ph="{...}" />
+                <marker date="1546452370711" expanded="true" signature="2247:2481" ph="{...}" />
+                <marker date="1546452370711" expanded="true" signature="2308:2383" ph="{...}" />
+                <marker date="1546452370711" expanded="true" signature="2404:2467" ph="{...}" />
+                <marker date="1546452370711" expanded="true" signature="2645:2927" ph="{...}" />
+                <marker date="1546452370711" expanded="true" signature="2692:2767" ph="{...}" />
+                <marker date="1546452370711" expanded="true" signature="3070:3387" ph="{...}" />
+                <marker date="1546452370711" expanded="true" signature="3117:3192" ph="{...}" />
+                <marker date="1546452370711" expanded="true" signature="3237:3300" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/H_Plus_Sports/Models/Order.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-134">
+              <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+              <folding>
+                <marker date="1521135950000" expanded="false" signature="6:92" ph="..." />
+                <marker date="1521135950000" expanded="true" signature="124:766" ph="{...}" />
+                <marker date="1521135950000" expanded="true" signature="157:764" ph="{...}" />
+                <marker date="1521135950000" expanded="true" signature="186:256" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/H_Plus_Sports/Models/Customer.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-160">
+              <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+              <folding>
+                <marker date="1521135952000" expanded="false" signature="6:92" ph="..." />
+                <marker date="1521135952000" expanded="true" signature="124:801" ph="{...}" />
+                <marker date="1521135952000" expanded="true" signature="160:799" ph="{...}" />
+                <marker date="1521135952000" expanded="true" signature="192:254" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/H_Plus_Sports/Program.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+              <folding>
+                <marker date="1546208855488" expanded="false" signature="6:255" ph="..." />
+                <marker date="1546208855488" expanded="true" signature="280:607" ph="{...}" />
+                <marker date="1546208855488" expanded="true" signature="307:605" ph="{...}" />
+                <marker date="1546208855488" expanded="true" signature="360:434" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/H_Plus_Sports/Startup.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="130">
+              <caret line="50" column="14" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="14" />
+              <folding>
+                <marker date="1546451896514" expanded="true" signature="6:323" ph="..." />
+                <marker date="1546451896514" expanded="true" signature="348:2273" ph="{...}" />
+                <marker date="1546451896514" expanded="true" signature="375:2271" ph="{...}" />
+                <marker date="1546451896514" expanded="true" signature="434:497" ph="{...}" />
+                <marker date="1546451896514" expanded="true" signature="720:1578" ph="{...}" />
+                <marker date="1546451896514" expanded="true" signature="1766:2265" ph="{...}" />
+                <marker date="1546451896514" expanded="true" signature="1813:1890" ph="{...}" />
+                <marker date="1546451896514" expanded="true" signature="1907:2110" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/H_Plus_Sports/Properties/launchSettings.json">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/H_Plus_Sports.Tests/CustomerIntegrationTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2D506C52-CF4B-4BDB-B896-80B6E2C92982/75/9f546937/EntityFrameworkServiceCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/H_Plus_Sports/Controllers/CustomersController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/127E718A-C42E-4542-A71B-54CEC3EF156B/19/657bd899/HostingEnvironment.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/H_Plus_Sports/Startup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/H_Plus_Sports/Controllers/OrdersController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -50,6 +160,8 @@
     <setting file="file://$PROJECT_DIR$/H_Plus_Sports/Models/Product.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/127E718A-C42E-4542-A71B-54CEC3EF156B/18/1e86c897/WebHostBuilder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/H_Plus_Sports/Controllers/OrderItemsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/H_Plus_Sports/Models/Customer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/H_Plus_Sports/Models/Order.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B4EF600F-4A59-4FE2-865A-8F97F915FB9D/a9/1cc89876/ActionResult`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/H_Plus_Sports/Models/H_Plus_SportsContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F877879B-672A-4B22-8F21-69738D548E79/63/c3e75617/BaseRunTests.cs" root0="SKIP_HIGHLIGHTING" />
@@ -57,15 +169,15 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/H_Plus_Sports/Startup.cs" />
         <option value="$PROJECT_DIR$/H_Plus_Sports/Models/H_Plus_SportsContext.cs" />
         <option value="$APPLICATION_CONFIG_DIR$/rider64.vmoptions" />
-        <option value="$PROJECT_DIR$/H_Plus_Sports/Controllers/CustomersController.cs" />
         <option value="$PROJECT_DIR$/H_Plus_Sports/Controllers/OrdersController.cs" />
         <option value="$PROJECT_DIR$/H_Plus_Sports/Controllers/ProductsController.cs" />
         <option value="$PROJECT_DIR$/H_Plus_Sports/Controllers/SalespersonsController.cs" />
         <option value="$PROJECT_DIR$/H_Plus_Sports/Controllers/OrderItemsController.cs" />
         <option value="$PROJECT_DIR$/H_Plus_Sports.Tests/CustomerIntegrationTests.cs" />
+        <option value="$PROJECT_DIR$/H_Plus_Sports/Startup.cs" />
+        <option value="$PROJECT_DIR$/H_Plus_Sports/Controllers/CustomersController.cs" />
       </list>
     </option>
   </component>
@@ -81,6 +193,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="FileSystemExplorer" />
       <pane id="SolutionExplorer">
         <subPane>
           <expand>
@@ -91,7 +204,20 @@
             <path>
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
               <item name="H_Plus_Sports" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="H_Plus_Sports.Tests" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="H_Plus_Sports" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="H_Plus_Sports" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="H_Plus_Sports" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Dependencies" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="H_Plus_Sports" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="H_Plus_Sports" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Dependencies" type="24d0babc:SolutionExplorerModelNode" />
+              <item name=".NETCoreApp 2.2" type="24d0babc:SolutionExplorerModelNode" />
             </path>
           </expand>
           <select />
@@ -99,7 +225,6 @@
         <option name="show-all-files" value="false" />
       </pane>
       <pane id="AssemblyExplorer" />
-      <pane id="FileSystemExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -175,11 +300,12 @@
       <workItem from="1546279748268" duration="666000" />
       <workItem from="1546380161498" duration="1266000" />
       <workItem from="1546382169011" duration="1332000" />
+      <workItem from="1546450855051" duration="1937000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21441000" />
+    <option name="totallyTimeSpent" value="23378000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -193,7 +319,7 @@
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18435754" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29928172" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -316,13 +442,55 @@
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>services.FirstOrDefault()</expression-string>
+        <expression-string>customer</expression-string>
         <language-id>C#</language-id>
         <custom-info>RiderImportsList:</custom-info>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>services</expression-string>
+        <expression-string>customer.Order.First().Customer=null</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>customer.Order.First()</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>customer.Order</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>customer.Order[0]</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>customer.Order=new System.Collections.Generic.List&lt;Order&gt;()</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:System.Collections.ObjectModel;System.Collections.ObjectModel;System.Collections.ObjectModel;System.Collections.ObjectModel;System.Collections.ObjectModel</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>customer.Order=new List&lt;Order&gt;()</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>Ok(customer)</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>services.FirstOrDefault()</expression-string>
         <language-id>C#</language-id>
         <custom-info>RiderImportsList:</custom-info>
         <evaluation-mode>EXPRESSION</evaluation-mode>
@@ -336,24 +504,6 @@
           <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/H_Plus_Sports/Properties/launchSettings.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/H_Plus_Sports/Program.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-          <folding>
-            <marker date="1546208855488" expanded="true" signature="280:607" ph="{...}" />
-            <marker date="1546208855488" expanded="true" signature="307:605" ph="{...}" />
-            <marker date="1546208855488" expanded="true" signature="360:434" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/H_Plus_Sports/appsettings.Development.json">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2D506C52-CF4B-4BDB-B896-80B6E2C92982/75/9f546937/EntityFrameworkServiceCollectionExtensions.cs">
       <provider selected="true" editor-type-id="text-editor">
@@ -475,33 +625,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/H_Plus_Sports/Controllers/CustomersController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
-          <folding>
-            <marker date="1546279023417" expanded="false" signature="6:163" ph="..." />
-            <marker date="1546279023417" expanded="true" signature="201:3165" ph="{...}" />
-            <marker date="1546279023417" expanded="true" signature="317:3163" ph="{...}" />
-            <marker date="1546279023417" expanded="true" signature="445:497" ph="{...}" />
-            <marker date="1546279023417" expanded="true" signature="542:629" ph="{...}" />
-            <marker date="1546279023417" expanded="true" signature="735:1037" ph="{...}" />
-            <marker date="1546279023417" expanded="true" signature="820:887" ph="{...}" />
-            <marker date="1546279023417" expanded="true" signature="1174:1537" ph="{...}" />
-            <marker date="1546279023417" expanded="true" signature="1221:1296" ph="{...}" />
-            <marker date="1546279023417" expanded="true" signature="1430:1493" ph="{...}" />
-            <marker date="1546279023417" expanded="true" signature="1704:2094" ph="{...}" />
-            <marker date="1546279023417" expanded="true" signature="1751:1826" ph="{...}" />
-            <marker date="1546279023417" expanded="true" signature="1870:1935" ph="{...}" />
-            <marker date="1546279023417" expanded="true" signature="2235:2556" ph="{...}" />
-            <marker date="1546279023417" expanded="true" signature="2282:2357" ph="{...}" />
-            <marker date="1546279023417" expanded="true" signature="2699:3157" ph="{...}" />
-            <marker date="1546279023417" expanded="true" signature="2746:2821" ph="{...}" />
-            <marker date="1546279023417" expanded="true" signature="2954:3017" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/127E718A-C42E-4542-A71B-54CEC3EF156B/19/657bd899/HostingEnvironment.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="118">
@@ -516,32 +639,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/H_Plus_Sports/Startup.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
-          <folding>
-            <marker date="1546371189519" expanded="false" signature="6:532" ph="..." />
-            <marker date="1546371189519" expanded="true" signature="557:2480" ph="{...}" />
-            <marker date="1546371189519" expanded="true" signature="584:2478" ph="{...}" />
-            <marker date="1546371189519" expanded="true" signature="643:706" ph="{...}" />
-            <marker date="1546371189519" expanded="true" signature="929:1787" ph="{...}" />
-            <marker date="1546371189519" expanded="true" signature="1975:2472" ph="{...}" />
-            <marker date="1546371189519" expanded="true" signature="2022:2099" ph="{...}" />
-            <marker date="1546371189519" expanded="true" signature="2116:2319" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/127E718A-C42E-4542-A71B-54CEC3EF156B/18/1e86c897/WebHostBuilder.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
           <caret line="45" column="3" selection-start-line="45" selection-start-column="3" selection-end-line="45" selection-end-column="3" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/H_Plus_Sports/appsettings.json">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/H_Plus_Sports.Tests/CustomerIntegrationTests.cs">
       <provider selected="true" editor-type-id="text-editor">
@@ -557,6 +660,102 @@
             <marker date="1546383425105" expanded="false" signature="1347:1676" ph="{...}" />
             <marker date="1546383425105" expanded="false" signature="1763:2095" ph="{...}" />
             <marker date="1546383425105" expanded="true" signature="2185:2508" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/H_Plus_Sports/Models/Order.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-134">
+          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+          <folding>
+            <marker date="1521135950000" expanded="false" signature="6:92" ph="..." />
+            <marker date="1521135950000" expanded="true" signature="124:766" ph="{...}" />
+            <marker date="1521135950000" expanded="true" signature="157:764" ph="{...}" />
+            <marker date="1521135950000" expanded="true" signature="186:256" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/H_Plus_Sports/Models/Customer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-160">
+          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+          <folding>
+            <marker date="1521135952000" expanded="false" signature="6:92" ph="..." />
+            <marker date="1521135952000" expanded="true" signature="124:801" ph="{...}" />
+            <marker date="1521135952000" expanded="true" signature="160:799" ph="{...}" />
+            <marker date="1521135952000" expanded="true" signature="192:254" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/H_Plus_Sports/appsettings.Development.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/H_Plus_Sports/appsettings.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/H_Plus_Sports/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding>
+            <marker date="1546208855488" expanded="false" signature="6:255" ph="..." />
+            <marker date="1546208855488" expanded="true" signature="280:607" ph="{...}" />
+            <marker date="1546208855488" expanded="true" signature="307:605" ph="{...}" />
+            <marker date="1546208855488" expanded="true" signature="360:434" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/H_Plus_Sports/Properties/launchSettings.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/H_Plus_Sports/Startup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="50" column="14" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="14" />
+          <folding>
+            <marker date="1546451896514" expanded="true" signature="6:323" ph="..." />
+            <marker date="1546451896514" expanded="true" signature="348:2273" ph="{...}" />
+            <marker date="1546451896514" expanded="true" signature="375:2271" ph="{...}" />
+            <marker date="1546451896514" expanded="true" signature="434:497" ph="{...}" />
+            <marker date="1546451896514" expanded="true" signature="720:1578" ph="{...}" />
+            <marker date="1546451896514" expanded="true" signature="1766:2265" ph="{...}" />
+            <marker date="1546451896514" expanded="true" signature="1813:1890" ph="{...}" />
+            <marker date="1546451896514" expanded="true" signature="1907:2110" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/H_Plus_Sports/Controllers/CustomersController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="56" column="23" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="23" />
+          <folding>
+            <marker date="1546452370711" expanded="false" signature="6:194" ph="..." />
+            <marker date="1546452370711" expanded="true" signature="232:3395" ph="{...}" />
+            <marker date="1546452370711" expanded="true" signature="348:3393" ph="{...}" />
+            <marker date="1546452370711" expanded="true" signature="496:570" ph="{...}" />
+            <marker date="1546452370711" expanded="true" signature="627:703" ph="{...}" />
+            <marker date="1546452370711" expanded="true" signature="809:1133" ph="{...}" />
+            <marker date="1546452370711" expanded="true" signature="905:972" ph="{...}" />
+            <marker date="1546452370711" expanded="true" signature="1270:1658" ph="{...}" />
+            <marker date="1546452370711" expanded="true" signature="1317:1392" ph="{...}" />
+            <marker date="1546452370711" expanded="true" signature="1491:1554" ph="{...}" />
+            <marker date="1546452370711" expanded="true" signature="1825:2504" ph="{...}" />
+            <marker date="1546452370711" expanded="true" signature="1872:1947" ph="{...}" />
+            <marker date="1546452370711" expanded="true" signature="1991:2056" ph="{...}" />
+            <marker date="1546452370711" expanded="true" signature="2073:2198" ph="{...}" />
+            <marker date="1546452370711" expanded="true" signature="2247:2481" ph="{...}" />
+            <marker date="1546452370711" expanded="true" signature="2308:2383" ph="{...}" />
+            <marker date="1546452370711" expanded="true" signature="2404:2467" ph="{...}" />
+            <marker date="1546452370711" expanded="true" signature="2645:2927" ph="{...}" />
+            <marker date="1546452370711" expanded="true" signature="2692:2767" ph="{...}" />
+            <marker date="1546452370711" expanded="true" signature="3070:3387" ph="{...}" />
+            <marker date="1546452370711" expanded="true" signature="3117:3192" ph="{...}" />
+            <marker date="1546452370711" expanded="true" signature="3237:3300" ph="{...}" />
           </folding>
         </state>
       </provider>
