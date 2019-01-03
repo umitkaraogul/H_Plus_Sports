@@ -1,4 +1,4 @@
 {
-    "appService.defaultWebAppToDeploy": "/subscriptions/d567c8fa-deda-436b-9efd-883009338457/resourceGroups/karaogulresources/providers/Microsoft.Web/sites/HPlusSportsKaraogul",
-    "appService.deploySubpath": ""
+    "appService.deploySubpath": "H_Plus_Sports",
+    "appService.defaultWebAppToDeploy": "/subscriptions/d567c8fa-deda-436b-9efd-883009338457/resourceGroups/appsvc_rg_windows_centralus/providers/Microsoft.Web/sites/hplussportskaraogulw"
 }
