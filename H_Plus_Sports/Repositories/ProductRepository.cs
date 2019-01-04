@@ -1,7 +1,9 @@
 ﻿using H_Plus_Sports.Contracts;
 using H_Plus_Sports.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Caching.Memory;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -11,9 +13,11 @@ namespace H_Plus_Sports.Repositories
     public class ProductRepository : IProductRepository
     {
         private H_Plus_SportsContext _context;
-        private IMemoryCache _cache;
+        private IDistributedCache _cache;
 
-        public ProductRepository(H_Plus_SportsContext context, IMemoryCache cache)
+
+
+        public ProductRepository(H_Plus_SportsContext context, IDistributedCache cache)
         {
             _context = context;
             _cache = cache;
@@ -30,25 +34,24 @@ namespace H_Plus_Sports.Repositories
             await _context.SaveChangesAsync();
             return product;
         }
+
         public async Task<Product> Find(string id)
         {
-            var cachedProduct = _cache.Get<Product>(id);
+            var cachedProduct = await _cache.GetStringAsync(id);
 
             if (cachedProduct != null)
             {
-                return cachedProduct;
+                return JsonConvert.DeserializeObject<Product>(cachedProduct);
             }
             else
             {
-                var dbProduct = await _context.Product.Include(product => product.OrderItem).SingleOrDefaultAsync(a => a.ProductId == id);
+                var dbProduct = await _context.Product.SingleOrDefaultAsync(a => a.ProductId == id);
 
-                var cacheEntryOptions = new MemoryCacheEntryOptions()
-                    .SetSlidingExpiration(TimeSpan.FromSeconds(60));
-                _cache.Set(dbProduct.ProductId, dbProduct, cacheEntryOptions);
+                await _cache.SetStringAsync(id, JsonConvert.SerializeObject(dbProduct));
 
                 return dbProduct;
             }
-
+            
         }
 
         public async Task<Product> Remove(string id)
