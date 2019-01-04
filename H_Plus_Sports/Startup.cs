@@ -32,6 +32,8 @@ namespace H_Plus_Sports
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<ISalespersonRepository, SalespersonRepository>();
 
+            services.AddResponseCaching();
+
             var connection ="Server=tcp:hsportskaraogul.database.windows.net,1433;Initial Catalog=H_Plus_Sports;Persist Security Info=False;User ID=umit;Password=!Q2w3e4r;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
 
             services.AddDbContext<H_Plus_SportsContext>(options => options.UseSqlServer(connection));
@@ -50,6 +52,7 @@ namespace H_Plus_Sports
                 app.UseHsts();
             }
 
+            app.UseResponseCaching();  
             //app.UseMiddleware<StackifyMiddleware.RequestTracerMiddleware>();
             app.UseHttpsRedirection();
             app.UseMvc();
