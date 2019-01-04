@@ -1,6 +1,8 @@
 ﻿using H_Plus_Sports.Contracts;
 using H_Plus_Sports.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Memory;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -9,10 +11,12 @@ namespace H_Plus_Sports.Repositories
     public class ProductRepository : IProductRepository
     {
         private H_Plus_SportsContext _context;
+        private IMemoryCache _cache;
 
-        public ProductRepository(H_Plus_SportsContext context)
+        public ProductRepository(H_Plus_SportsContext context, IMemoryCache cache)
         {
             _context = context;
+            _cache = cache;
         }
 
         public IEnumerable<Product> GetAll()
@@ -26,10 +30,25 @@ namespace H_Plus_Sports.Repositories
             await _context.SaveChangesAsync();
             return product;
         }
-
         public async Task<Product> Find(string id)
         {
-            return await _context.Product.Include(product => product.OrderItem).SingleOrDefaultAsync(a => a.ProductId == id);
+            var cachedProduct = _cache.Get<Product>(id);
+
+            if (cachedProduct != null)
+            {
+                return cachedProduct;
+            }
+            else
+            {
+                var dbProduct = await _context.Product.Include(product => product.OrderItem).SingleOrDefaultAsync(a => a.ProductId == id);
+
+                var cacheEntryOptions = new MemoryCacheEntryOptions()
+                    .SetSlidingExpiration(TimeSpan.FromSeconds(60));
+                _cache.Set(dbProduct.ProductId, dbProduct, cacheEntryOptions);
+
+                return dbProduct;
+            }
+
         }
 
         public async Task<Product> Remove(string id)

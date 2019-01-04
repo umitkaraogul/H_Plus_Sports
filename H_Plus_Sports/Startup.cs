@@ -33,6 +33,7 @@ namespace H_Plus_Sports
             services.AddScoped<ISalespersonRepository, SalespersonRepository>();
 
             services.AddResponseCaching();
+            services.AddMemoryCache();
 
             var connection ="Server=tcp:hsportskaraogul.database.windows.net,1433;Initial Catalog=H_Plus_Sports;Persist Security Info=False;User ID=umit;Password=!Q2w3e4r;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
 
@@ -52,7 +53,8 @@ namespace H_Plus_Sports
                 app.UseHsts();
             }
 
-            app.UseResponseCaching();  
+            app.UseResponseCaching(); 
+             
             //app.UseMiddleware<StackifyMiddleware.RequestTracerMiddleware>();
             app.UseHttpsRedirection();
             app.UseMvc();
