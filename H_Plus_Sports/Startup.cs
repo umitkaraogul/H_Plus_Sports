@@ -41,7 +41,7 @@ namespace H_Plus_Sports
                 options.InstanceName = "master";
             });
 
-            var connection ="Server=tcp:hsportskaraogul.database.windows.net,1433;Initial Catalog=H_Plus_Sports;Persist Security Info=False;User ID=umit;Password=!Q2w3e4r;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+            var connection ="";
 
             services.AddDbContext<H_Plus_SportsContext>(options => options.UseSqlServer(connection));
         }
